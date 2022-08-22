@@ -26,10 +26,7 @@ const router = express.Router();
  *         schema:
  *           type: array
  *           items:
- *             type: integer
- *           minItems: 1
- *         style: form
- *         explode: true
+ *             type: string
  *         description: User ids
  *     responses:
  *       200:

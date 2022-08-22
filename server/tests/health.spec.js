@@ -1,4 +1,3 @@
-import app from '../loaders/app.js';
 import request from 'supertest';
 
 describe('check api is up or not', () => {

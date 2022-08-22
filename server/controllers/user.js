@@ -29,8 +29,7 @@ export async function getUserById(req, res) {
 /** Retrieve the user info based on ids sent */
 export async function getUsersByIds(req, res) {
   /** @type {string[]} */ const ids = req.query.ids;
-  // if (typeof ids === 'object' && Array.isArray(ids)) {
-  if (Array.isArray(ids)) {
+  if (typeof ids === 'object' && Array.isArray(ids)) {
     const users = {};
     for (const id of ids) {
       const user = await redisClient.hGetAll(`user:${id}`);
